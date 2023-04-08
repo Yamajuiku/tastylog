@@ -36,6 +36,8 @@ jobs:
       - name: Terraform format
         run: |
           terraform fmt -check
+      - name: Debug
+        run: echo ${{ secrets.AWS_IAM_ROLE_ARN }}
       - name: Configure AWS Credential
         uses: aws-actions/configure-aws-credentials@v2
         with:
