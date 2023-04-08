@@ -36,13 +36,12 @@ jobs:
       - name: Terraform format
         run: |
           terraform fmt -check
-      - name: Debug
-        run: echo ${{ secrets.AWS_IAM_ROLE_ARN }}
       - name: Configure AWS Credential
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
+          # role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
+          role-to-assume: arn:aws:iam::313761354693:role/tastylog-dev-githubactions-iam-role2
       - name: Terraform init
         run: |
           terraform init -no-color
