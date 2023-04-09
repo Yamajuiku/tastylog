@@ -19,6 +19,7 @@ resource "aws_iam_role" "app_iam_role" {
     Env      = var.environment
     Message  = "Hello"
     Message2 = "HelloHello"
+    Message3 = "HelloHello"
   }
 }
 
