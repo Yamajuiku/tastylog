@@ -18,7 +18,7 @@ terraform {
 }
 
 # ---------------------------------------------
-# Provider.
+# Provider
 # ---------------------------------------------
 provider "aws" {
   profile = "terraform"
